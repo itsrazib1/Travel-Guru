@@ -1,8 +1,16 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Nav, Navbar } from "react-bootstrap";
 import { Link } from "react-router-dom";
+import { Authcontext } from "../Authprovider/Authprovider";
 
 const MainNav = () => {
+
+const {user,logOut} = useContext(Authcontext)
+const hendlelogout = () =>{
+  
+}
+
+
   return (
     <div className="w-full">
       <div className="container position-relative w-full">
@@ -40,7 +48,10 @@ const MainNav = () => {
               <Link className="btn btn-warning text-black ms-lg-4" to="login">
                 Login
               </Link>
+            
             </Nav>
+            {user && <span>welcome,{user.email}
+             <button onClick={hendlelogout}>logOut</button></span>}
           </Navbar.Collapse>
         </Navbar>
       </div>
