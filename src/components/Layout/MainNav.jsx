@@ -10,14 +10,14 @@ const MainNav = () => {
           collapseOnSelect
           expand="lg"
           className=" top-0 w-100 position-absolute px-4"
-          style={{ backgroundColor: "rgba(0, 0, 0, 0.319)"}}
+         
         >
           <Link to="/" className="m-0 logo">
             Travel Guru
           </Link>
           <Navbar.Toggle aria-controls="responsive-navbar-nav m-2" />
           <Navbar.Collapse id="responsive-navbar-nav ">
-            <Nav className="ms-auto text-black">
+            <Nav className="ms-auto text-black bg-secondary rounded-5 px-1 py-1" >
               <input
                 type="text"
                 className="inputNav"
